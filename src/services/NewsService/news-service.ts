@@ -24,6 +24,8 @@ export class NewsService {
       apiKey: Config.newsKey
     }
 
+    /*return Observable.interval(2000) 
+        .switchMap(() => this.http.get(this.baseUrl, {params: params}));*/
     return this.http.get(this.baseUrl, {params: params});
   }
 
