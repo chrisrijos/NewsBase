@@ -1,6 +1,12 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Zero Fake</ion-title>
+  <ion-navbar style="background: darkslategrey;">
+    <ion-title>
+      CROSS-FIRE
+      <ion-icon name="flame"></ion-icon>
+    </ion-title>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="apps"></ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
 
@@ -12,18 +18,18 @@
     <ion-row>
       <ion-card *ngFor="let a of article.data.articles">
       <img [src]="a.urlToImage"/>
-      <ion-card-content (click)="resolveArticle(a.url)">
-        <ion-card-title>
-          {{ a.title }}
-          </ion-card-title>
-        <p>
-          {{ a.description }}
-        </p>
-        <p>
-          {{ a.publishedAt }}
-        </p>
-      </ion-card-content>
-    </ion-card>
+        <ion-card-content (click)="resolveArticle(a.url)">
+          <ion-card-title>
+            {{ a.title }}
+            </ion-card-title>
+          <p>
+            {{ a.description }}
+          </p>
+          <p>
+            {{ a.publishedAt }}
+          </p>
+        </ion-card-content>
+      </ion-card>
     </ion-row>
   </h2>
 </ion-content>
